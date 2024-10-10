@@ -25,6 +25,8 @@ def hangman_game():
 #  returns a string with letters revealed or hidden based on user guesses.
 def get_display_word():
     global hidden_word, guessed_letters
+    display_word = [letter if letter in guessed_letters else '_' for letter in hidden_word] #This creates a list of letter or underscored depending on guessed letters.
+    return ' '.join(display_word) # This will join the list with spaces in between using .join
 
 # TODO TASK 2
 #  Ensure that guesses are only added if they haven’t already been guessed.
