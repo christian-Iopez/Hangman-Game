@@ -34,6 +34,17 @@ def get_display_word():
 def check_correct_guess(input_letter):
     global guessed_letters
 
+    input_letter = input_letter.lower()  # Handles Case insensitivity by using .lower
+
+    if input_letter in guessed_letters:
+        return True  # Checks if the letter has already been guessed
+
+    guessed_letters.append(input_letter)  # Add to guessed letters
+
+    # Either returns True or False depending on if it is in the hidden word or not
+    return input_letter in hidden_word
+
+
 # TODO TASK 3
 #  Implement the logic that tracks the number of attempts and determines if
 #  the player has lost (attempts ≥ 6).
