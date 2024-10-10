@@ -61,6 +61,12 @@ def check_lose():
 def check_win():
     global hidden_word, guessed_letters
 
+    for char in hidden_word: # This for will check if every letter in the hidden_word is in guessed_letters
+        if char not in guessed_letters:
+            return False  # Returns False if any letter is not guessed, the player hasn't won yet
+
+    return True  # Returns True if all letters have been guessed, the player wins
+
 @app.route('/guess', methods=['POST'])
 def guess():
     global hidden_word, attempts
