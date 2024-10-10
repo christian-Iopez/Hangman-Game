@@ -51,6 +51,10 @@ def check_correct_guess(input_letter):
 def check_lose():
     global attempts
 
+    if attempts >= 6: # This will check the number of attempts, if it's greater than 6 you lose
+        return True  # Player has lost
+    return False # The player still has not lost
+
 # TODO TASK 4
 #  Ensure that the function correctly checks if all letters in hidden_word are
 #  in the guessed_letters.
