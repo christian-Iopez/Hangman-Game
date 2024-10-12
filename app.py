@@ -2,7 +2,22 @@ from flask import Flask, render_template, request, redirect, url_for
 import random
 app = Flask(__name__)
 
-words = ['python', 'flask', 'web', 'programming', 'hangman']
+words = [
+    'python', 'flask', 'web', 'programming', 'hangman',
+    'snake', 'coding', 'scripting', 'interpreter', 'module',
+    'bottle', 'framework', 'server', 'routes', 'jinja',
+    'html', 'browser', 'internet', 'client', 'css',
+    'algorithm', 'software', 'function', 'variable', 'compiler',
+    'guess', 'letter', 'puzzle', 'word', 'game',
+    'debugging', 'loop', 'recursion', 'syntax', 'binary',
+    'database', 'api', 'endpoint', 'cookies', 'session',
+    'frontend', 'backend', 'middleware', 'javascript', 'query',
+    'console', 'terminal', 'shell', 'object', 'class',
+    'data', 'array', 'list', 'dictionary', 'tuple',
+    'deploy', 'debug', 'git', 'repository', 'commit',
+    'http', 'url', 'dns', 'firewall', 'encryption'
+]
+
 
 hidden_word = ''
 guessed_letters = []
